@@ -1,18 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://be3e267yiocdb"]
+[gd_scene load_steps=3 format=3 uid="uid://be3e267yiocdb"]
 
 [ext_resource type="Script" path="res://Ball/Ball.gd" id="1_0sitg"]
-[ext_resource type="Texture2D" uid="uid://0yxdnnuwtfwl" path="res://Ball/Ball.svg" id="1_8bd5n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i6k4x"]
 radius = 65.0077
 
-[node name="Area2D" type="Area2D"]
+[node name="Ball" type="CharacterBody2D"]
 script = ExtResource("1_0sitg")
 
 [node name="Ball" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_i6k4x")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_8bd5n")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, -65, 17, -63, 33, -56, 47, -45, 57, -32, 63, -16, 65, 0, 63, 17, 56, 33, 46, 46, 33, 56, 17, 63, 0, 65, -17, 63, -32, 57, -46, 46, -56, 33, -63, 17, -65, 0, -63, -17, -57, -32, -46, -46, -32, -57, -17, -63)
+metadata/_edit_group_ = true

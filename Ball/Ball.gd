@@ -1,14 +1,13 @@
-extends Area2D
+extends CharacterBody2D
 
-@export var speed = 750
-@export var direction = -1
 
+@export var SPEED = 20.0
+
+func _ready() -> void:
+	velocity = Vector2(-SPEED, 0)
 
 func _physics_process(delta: float) -> void:
-	position += transform.x * direction * speed * delta
-
-
-func _on_body_entered(body: Node2D) -> void:
-	print("boom!")
-	direction = direction * -1
-	#body.queue_free()
+	var collision :KinematicCollision2D = move_and_collide(velocity)
+	if collision:
+		var normal := collision.get_normal()
+		velocity = velocity.bounce(normal)
