@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgcd1gwwjgmyd"]
+
+[ext_resource type="Script" path="res://Main/Main.gd" id="1_gxcs0"]
+[ext_resource type="PackedScene" uid="uid://pgkj45u5w5yp" path="res://Player/Player.tscn" id="2_hg6de"]
+[ext_resource type="PackedScene" uid="uid://bp4encbf45g8c" path="res://Walls/Walls.tscn" id="3_lba0m"]
+[ext_resource type="PackedScene" uid="uid://be3e267yiocdb" path="res://Ball/Ball.tscn" id="4_rue43"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_gxcs0")
+
+[node name="Player" parent="." instance=ExtResource("2_hg6de")]
+position = Vector2(153, 319)
+MAX_SPEED = 3000
+
+[node name="Walls" parent="." instance=ExtResource("3_lba0m")]
+
+[node name="Area2D" parent="." instance=ExtResource("4_rue43")]
+position = Vector2(1041, 308)
