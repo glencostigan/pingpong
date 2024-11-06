@@ -1,18 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://be3e267yiocdb"]
+[gd_scene load_steps=4 format=3 uid="uid://be3e267yiocdb"]
 
 [ext_resource type="Script" path="res://Ball/Ball.gd" id="1_0sitg"]
+[ext_resource type="Texture2D" uid="uid://br7v3vikuwqbs" path="res://Ball/Ball.png" id="2_gkxsl"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_i6k4x"]
-radius = 65.0077
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpqgr"]
+size = Vector2(128, 128)
 
 [node name="Ball" type="CharacterBody2D"]
 script = ExtResource("1_0sitg")
 
 [node name="Ball" type="CollisionShape2D" parent="."]
 scale = Vector2(0.5, 0.5)
-shape = SubResource("CircleShape2D_i6k4x")
+shape = SubResource("RectangleShape2D_hpqgr")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-scale = Vector2(0.5, 0.5)
-polygon = PackedVector2Array(0, -65, 17, -63, 33, -56, 47, -45, 57, -32, 63, -16, 65, 0, 63, 17, 56, 33, 46, 46, 33, 56, 17, 63, 0, 65, -17, 63, -32, 57, -46, 46, -56, 33, -63, 17, -65, 0, -63, -17, -57, -32, -46, -46, -32, -57, -17, -63)
-metadata/_edit_group_ = true
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1.14441e-05, 3.8147e-06)
+scale = Vector2(10.625, 9.67634)
+texture = ExtResource("2_gkxsl")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Ball/Ball.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "73ca3f81769d87a676d4ea26ab89e37a"
