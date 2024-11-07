@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://pgkj45u5w5yp"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_8cxqw"]
-[ext_resource type="Texture2D" uid="uid://bb42k6h6760g6" path="res://Player/Player.svg" id="1_n3sv7"]
+[ext_resource type="Texture2D" uid="uid://br14f32cobjuy" path="res://Player/Player.png" id="2_wo14b"]
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -9,9 +9,26 @@ script = ExtResource("1_8cxqw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
+texture_filter = 1
 position = Vector2(9.53674e-07, 3.8147e-06)
-scale = Vector2(0.5, 2)
-texture = ExtResource("1_n3sv7")
+scale = Vector2(2, 2)
+texture = ExtResource("2_wo14b")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Player/Player.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "d91d2515b2f2ebc17ae5af3ce8b1fa03"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(24, -128, 32, 0, 24, 128, -32, 128, -32, -128)

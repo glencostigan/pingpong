@@ -4,22 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://br7v3vikuwqbs" path="res://Ball/Ball.png" id="2_gkxsl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hpqgr"]
-size = Vector2(128, 128)
+size = Vector2(64, 64)
 
 [node name="Ball" type="CharacterBody2D"]
 script = ExtResource("1_0sitg")
 
 [node name="Ball" type="CollisionShape2D" parent="."]
-scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_hpqgr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1.14441e-05, 3.8147e-06)
-scale = Vector2(10.625, 9.67634)
+scale = Vector2(2, 2)
 texture = ExtResource("2_gkxsl")
 metadata/_aseprite_wizard_interface_config_ = {
-"pending_changes": {}
+"layer_section": false,
+"output_section": false,
+"pending_changes": {},
+"slice_section": false
 }
 metadata/_aseprite_wizard_config_ = {
 "i_mode": 1,
@@ -33,4 +34,4 @@ metadata/_aseprite_wizard_config_ = {
 "slice": "",
 "source": "res://Ball/Ball.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "73ca3f81769d87a676d4ea26ab89e37a"
+metadata/_aseprite_wizard_source_file_hash_ = "273b5568113be1a9a2bb1d0a18fac804"
